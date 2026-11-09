@@ -40,7 +40,7 @@ function handleBack() {
   align-items: center;
   gap: 10px;
   padding: calc(10px + var(--safe-top)) 14px 10px;
-  background: rgba(245, 241, 234, 0.86);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -58,7 +58,7 @@ function handleBack() {
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 253, 250, 0.9);
+  background: #fff;
   box-shadow: var(--shadow-soft);
   color: var(--text);
 }
@@ -70,7 +70,7 @@ function handleBack() {
 .top-bar__title {
   flex: 1;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
   text-align: center;
 }

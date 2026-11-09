@@ -256,11 +256,12 @@ async function toggleActive(category) {
   width: 100%;
   height: 44px;
   margin-bottom: 14px;
-  border: 1px dashed rgba(61, 92, 76, 0.38);
-  border-radius: var(--radius-md);
-  background: rgba(229, 236, 227, 0.4);
+  border: 1.5px dashed rgba(255, 36, 66, 0.4);
+  border-radius: 999px;
+  background: rgba(255, 237, 240, 0.55);
   color: var(--accent-deep);
   font-size: 13px;
+  font-weight: 600;
 }
 
 .cat-card {
@@ -320,6 +321,7 @@ async function toggleActive(category) {
   background: transparent;
   color: var(--accent);
   font-size: 11.5px;
+  font-weight: 600;
 }
 
 .cat-card__actions button:last-child {
@@ -358,7 +360,7 @@ async function toggleActive(category) {
 
 .sub-chip--add {
   border-style: dashed;
-  border-color: rgba(61, 92, 76, 0.35);
+  border-color: rgba(255, 36, 66, 0.4);
   color: var(--accent);
 }
 

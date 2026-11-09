@@ -46,14 +46,14 @@ const statusLabel = computed(() => labelOf(CLOTHING_STATUS, props.cloth.status))
 <style scoped>
 .cloth-card {
   overflow: hidden;
-  border-radius: var(--radius-md);
+  border-radius: 18px;
   background: var(--surface);
   box-shadow: var(--shadow-soft);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .cloth-card:active {
-  transform: scale(0.985);
+  transform: scale(0.975);
   box-shadow: var(--shadow);
 }
 
@@ -75,30 +75,31 @@ const statusLabel = computed(() => labelOf(CLOTHING_STATUS, props.cloth.status))
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: var(--text-3);
-  background: linear-gradient(150deg, #f4efe4, #eae3d4);
+  color: #b9bcc4;
+  background: linear-gradient(150deg, #f6f6f8, #ececef);
 }
 
 .cloth-card__badge {
   position: absolute;
   top: 8px;
   left: 8px;
-  padding: 2px 8px;
+  padding: 3px 9px;
   border-radius: 999px;
-  background: rgba(255, 253, 250, 0.9);
-  color: var(--danger);
+  background: rgba(255, 36, 66, 0.92);
+  color: #fff;
   font-size: 10.5px;
+  font-weight: 600;
   letter-spacing: 0.04em;
   backdrop-filter: blur(4px);
 }
 
 .cloth-card__info {
-  padding: 9px 11px 11px;
+  padding: 10px 12px 12px;
 }
 
 .cloth-card__name {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
   color: var(--text);
   overflow: hidden;

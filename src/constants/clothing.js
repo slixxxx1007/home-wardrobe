@@ -5,14 +5,14 @@
 
 /** 归属人 */
 export const OWNERS = [
-  { value: 'me', label: '我' },
-  { value: 'wife', label: '老婆' }
+  { value: 'me', label: '孙理想' },
+  { value: 'wife', label: '张雨' }
 ]
 
 /** @type {Record<string, string>} */
 export const OWNER_LABELS = {
-  me: '我',
-  wife: '老婆'
+  me: '孙理想',
+  wife: '张雨'
 }
 
 /** 季节（可多选） */
@@ -50,19 +50,31 @@ export const CLOTHING_STATUS = [
 export const COLORS = [
   { value: '黑色', label: '黑色', hex: '#1f1f21' },
   { value: '白色', label: '白色', hex: '#f5f3ee' },
-  { value: '灰色', label: '灰色', hex: '#9a9a98' },
+  { value: '奶白', label: '奶白', hex: '#f7f2e6' },
   { value: '米色', label: '米色', hex: '#e6ddc9' },
+  { value: '杏色', label: '杏色', hex: '#f2e2cf' },
+  { value: '灰色', label: '灰色', hex: '#9a9a98' },
+  { value: '浅灰', label: '浅灰', hex: '#cbcbca' },
+  { value: '深灰', label: '深灰', hex: '#54545a' },
   { value: '卡其', label: '卡其', hex: '#c2ab89' },
   { value: '棕色', label: '棕色', hex: '#83543a' },
   { value: '驼色', label: '驼色', hex: '#c19a70' },
+  { value: '奶茶色', label: '奶茶色', hex: '#d9c3ab' },
+  { value: '焦糖色', label: '焦糖色', hex: '#a86b3f' },
   { value: '酒红', label: '酒红', hex: '#77303c' },
   { value: '红色', label: '红色', hex: '#c1402f' },
+  { value: '玫红', label: '玫红', hex: '#e3487a' },
   { value: '粉色', label: '粉色', hex: '#e4a4b4' },
+  { value: '藕粉', label: '藕粉', hex: '#eec9d4' },
+  { value: '豆沙色', label: '豆沙色', hex: '#b56a72' },
   { value: '橙色', label: '橙色', hex: '#d4823f' },
   { value: '黄色', label: '黄色', hex: '#ddb647' },
   { value: '绿色', label: '绿色', hex: '#5f7d58' },
+  { value: '军绿', label: '军绿', hex: '#6b6d4e' },
+  { value: '薄荷绿', label: '薄荷绿', hex: '#a8d8c0' },
   { value: '藏青', label: '藏青', hex: '#2b3a54' },
   { value: '蓝色', label: '蓝色', hex: '#4a79a2' },
+  { value: '牛仔蓝', label: '牛仔蓝', hex: '#6f89a6' },
   { value: '紫色', label: '紫色', hex: '#77599c' },
   { value: '银色', label: '银色', hex: '#c6c9ce' },
   { value: '金色', label: '金色', hex: '#c3a35e' },

@@ -129,6 +129,7 @@ async function handleChange(event) {
 
 .photo-picker__empty-title {
   font-size: 13.5px;
+  font-weight: 600;
   color: var(--text);
 }
 
@@ -137,7 +138,7 @@ async function handleChange(event) {
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  color: var(--text-3);
+  color: #b3a7a6;
 }
 
 .photo-picker__loading {
@@ -146,7 +147,7 @@ async function handleChange(event) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(245, 241, 234, 0.88);
+  background: rgba(255, 237, 240, 0.9);
   font-size: 12.5px;
   color: var(--accent-deep);
 }

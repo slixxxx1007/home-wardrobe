@@ -257,12 +257,14 @@ function handleSaved(cloth) {
   gap: 4px;
   height: 34px;
   margin-top: 4px;
-  padding: 0 12px;
-  border: 1px solid var(--line);
+  padding: 0 13px;
+  border: none;
   border-radius: 999px;
-  background: rgba(255, 253, 250, 0.8);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
   color: var(--text-2);
   font-size: 12px;
+  font-weight: 500;
 }
 
 .owner-switch {
@@ -300,16 +302,16 @@ function handleSaved(cloth) {
   min-width: 20px;
   padding: 0 6px;
   border-radius: 999px;
-  background: rgba(35, 36, 31, 0.06);
+  background: rgba(43, 32, 33, 0.06);
   color: var(--text-3);
   font-size: 10.5px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 16px;
 }
 
 .owner-switch button.is-active .owner-switch__count {
-  background: var(--accent-soft);
-  color: var(--accent-deep);
+  background: var(--accent);
+  color: #fff;
 }
 
 .search {
@@ -343,7 +345,7 @@ function handleSaved(cloth) {
   right: 0;
   bottom: 4px;
   width: 24px;
-  background: linear-gradient(90deg, rgba(245, 241, 234, 0), rgba(245, 241, 234, 0.92));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.92));
   pointer-events: none;
 }
 
@@ -438,13 +440,13 @@ function handleSaved(cloth) {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   border: none;
   border-radius: 50%;
-  background: var(--accent);
+  background: linear-gradient(135deg, #ff4d67, var(--accent) 55%, var(--accent-deep));
   color: #fff;
-  box-shadow: 0 12px 26px rgba(47, 74, 61, 0.32);
+  box-shadow: 0 14px 30px rgba(255, 36, 66, 0.34);
   pointer-events: auto;
   transition: transform 0.18s ease;
 }

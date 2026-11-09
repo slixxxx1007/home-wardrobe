@@ -1,39 +1,39 @@
-/* ---------- 设计变量 ---------- */
+/* ---------- 设计变量 · 红白搭配 ---------- */
 :root {
-  --bg: #f5f1ea;
-  --bg-deep: #ece6da;
-  --surface: #fffdfa;
-  --surface-2: #efeade;
-  --text: #23241f;
-  --text-2: #6f6a5f;
-  --text-3: #a49d8f;
-  --accent: #3d5c4c;
-  --accent-deep: #2f4a3d;
-  --accent-soft: #e5ece3;
-  --line: rgba(35, 36, 31, 0.08);
-  --danger: #b0523c;
-  --shadow: 0 8px 24px rgba(71, 60, 42, 0.07);
-  --shadow-soft: 0 2px 10px rgba(71, 60, 42, 0.05);
+  --bg: #ffffff;
+  --bg-deep: #f1f1f4;
+  --surface: #ffffff;
+  --surface-2: #f5f5f7;
+  --text: #1f191a;
+  --text-2: #857472;
+  --text-3: #b3a7a6;
+  --accent: #ff2442;
+  --accent-deep: #e01534;
+  --accent-soft: #ffedf0;
+  --line: rgba(31, 25, 26, 0.08);
+  --danger: #ff2442;
+  --shadow: 0 10px 28px rgba(255, 36, 66, 0.07), 0 2px 8px rgba(31, 25, 26, 0.04);
+  --shadow-soft: 0 2px 12px rgba(31, 25, 26, 0.05);
   --radius-lg: 22px;
-  --radius-md: 16px;
+  --radius-md: 18px;
   --radius-sm: 12px;
-  --font-display: "Songti SC", "Noto Serif SC", "STSong", serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", sans-serif;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 
-  --el-color-primary: #3d5c4c;
-  --el-color-primary-light-3: #5f7a6c;
-  --el-color-primary-light-5: #86a094;
-  --el-color-primary-light-7: #b3c4ba;
-  --el-color-primary-light-8: #cbd7cf;
-  --el-color-primary-light-9: #e6ede9;
-  --el-color-primary-dark-2: #2f4a3d;
-  --el-color-danger: #b0523c;
-  --el-color-danger-light-9: #f7ece8;
+  --el-color-primary: #ff2442;
+  --el-color-primary-light-3: #ff5169;
+  --el-color-primary-light-5: #ff8ba0;
+  --el-color-primary-light-7: #ffc2cd;
+  --el-color-primary-light-8: #ffdae1;
+  --el-color-primary-light-9: #ffedf0;
+  --el-color-primary-dark-2: #e01534;
+  --el-color-danger: #ff2442;
+  --el-color-danger-light-9: #ffedf0;
   --el-border-radius-base: 12px;
-  --el-border-color: rgba(35, 36, 31, 0.12);
-  --el-text-color-primary: #23241f;
-  --el-text-color-regular: #55524a;
+  --el-border-color: rgba(43, 32, 33, 0.12);
+  --el-text-color-primary: #2b2021;
+  --el-text-color-regular: #6d5a58;
   --el-font-size-base: 14px;
 }
 
@@ -50,7 +50,7 @@ body,
 
 body {
   margin: 0;
-  background: #e8e2d6;
+  background: #ececef;
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC",
     "Helvetica Neue", "Microsoft YaHei", sans-serif;
@@ -85,9 +85,7 @@ button {
   min-height: 100dvh;
   margin: 0 auto;
   background: var(--bg);
-  background-image: radial-gradient(circle at 18% -8%, #fbf8f1 0%, transparent 45%),
-    radial-gradient(circle at 100% 0%, #eef0e7 0%, transparent 38%);
-  box-shadow: 0 0 40px rgba(60, 50, 35, 0.08);
+  box-shadow: 0 0 40px rgba(31, 25, 26, 0.08);
   overflow-x: hidden;
 }
 
@@ -103,16 +101,17 @@ button {
 .eyebrow {
   font-size: 11px;
   letter-spacing: 0.18em;
-  color: var(--text-3);
+  color: var(--accent);
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .display-title {
   font-family: var(--font-display);
   font-size: 30px;
   line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .section-label {
@@ -146,20 +145,23 @@ button {
   border: 1px solid transparent;
   border-radius: 999px;
   background: var(--surface-2);
-  color: #55524a;
+  color: #6d5a58;
   font-size: 13px;
+  font-weight: 500;
   line-height: 1;
   white-space: nowrap;
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
 
 .chip:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
 .chip.is-active {
   background: var(--accent);
   color: #fff;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(255, 36, 66, 0.22);
 }
 
 .chip.chip--sm {
@@ -174,9 +176,10 @@ button {
 }
 
 .chip.chip--outline.is-active {
-  border-color: var(--accent);
+  border-color: rgba(255, 36, 66, 0.4);
   background: var(--accent-soft);
   color: var(--accent-deep);
+  box-shadow: none;
 }
 
 /* ---------- 空状态 ---------- */
@@ -197,16 +200,15 @@ button {
   justify-content: center;
   width: 64px;
   height: 76px;
-  border-radius: 14px;
-  background: var(--surface);
-  border: 1px dashed rgba(35, 36, 31, 0.16);
-  color: var(--text-3);
+  border-radius: 20px 20px 20px 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .empty-state__title {
   font-size: 15px;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .empty-state__text {
@@ -225,7 +227,7 @@ button {
   width: min(100%, 520px);
   transform: translateX(-50%);
   padding: 12px 18px calc(14px + var(--safe-bottom));
-  background: linear-gradient(180deg, rgba(245, 241, 234, 0) 0%, rgba(245, 241, 234, 0.94) 32%, #f5f1ea 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.94) 32%, #ffffff 100%);
 }
 
 /* ---------- Element Plus 移动端微调 ---------- */
@@ -234,7 +236,7 @@ button {
 }
 
 .el-dialog {
-  --el-dialog-border-radius: 20px;
+  --el-dialog-border-radius: 22px;
 }
 
 .el-dialog.is-fullscreen {
@@ -248,7 +250,7 @@ button {
 
 .el-dialog__title {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .el-dialog__body {
@@ -272,7 +274,7 @@ button {
 .el-select__wrapper {
   background: var(--surface);
   box-shadow: 0 0 0 1px var(--line) inset;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 .el-input__wrapper.is-focus,
@@ -281,17 +283,22 @@ button {
 }
 
 .el-overlay {
-  background: rgba(30, 29, 25, 0.42);
+  background: rgba(43, 32, 33, 0.4);
 }
 
 .el-message-box {
   width: min(86vw, 380px);
-  border-radius: 18px;
-  padding: 20px;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.el-message-box__title {
+  font-weight: 700;
 }
 
 .el-button {
-  border-radius: 12px;
+  border-radius: 14px;
+  font-weight: 600;
 }
 
 .el-button--large {
@@ -299,9 +306,22 @@ button {
   font-size: 15px;
 }
 
+.el-button--primary:not(.is-plain) {
+  box-shadow: 0 8px 18px rgba(255, 36, 66, 0.24);
+}
+
+.el-button.is-round {
+  border-radius: 999px;
+  padding: 0 22px;
+}
+
 .el-popper.is-light {
-  border-radius: 12px;
+  border-radius: 14px;
   border-color: var(--line);
+}
+
+.el-switch.is-checked .el-switch__core {
+  background: var(--accent);
 }
 
 /* ---------- 动效 ---------- */

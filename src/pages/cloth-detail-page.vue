@@ -161,7 +161,7 @@ async function handleDelete() {
   width: 100%;
   aspect-ratio: 3 / 4;
   max-height: 58vh;
-  border-radius: var(--radius-lg);
+  border-radius: 24px;
   background: var(--surface-2);
   box-shadow: var(--shadow);
 }
@@ -183,9 +183,9 @@ async function handleDelete() {
   justify-content: center;
   gap: 8px;
   height: 100%;
-  color: var(--text-3);
+  color: #b9bcc4;
   font-size: 12px;
-  background: linear-gradient(150deg, #f4efe4, #eae3d4);
+  background: linear-gradient(150deg, #f6f6f8, #ececef);
 }
 
 .detail-head {
@@ -194,10 +194,10 @@ async function handleDelete() {
 
 .detail-name {
   font-family: var(--font-display);
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 27px;
+  font-weight: 800;
   line-height: 1.3;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
 .detail-tags {
@@ -216,12 +216,13 @@ async function handleDelete() {
   background: var(--surface-2);
   color: var(--text-2);
   font-size: 11.5px;
+  font-weight: 500;
 }
 
 .tag--strong {
   background: var(--accent-soft);
   color: var(--accent-deep);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .aspect-tags {
@@ -299,11 +300,14 @@ async function handleDelete() {
 
 .detail-delete {
   flex: 0 0 96px;
+  border-radius: 999px;
   color: var(--text-2);
+  background: #fff;
 }
 
 .detail-actions .el-button--primary {
   flex: 1;
+  border-radius: 999px;
   font-size: 15px;
 }
 </style>
