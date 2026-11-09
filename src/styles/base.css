@@ -1,0 +1,335 @@
+/* ---------- 设计变量 ---------- */
+:root {
+  --bg: #f5f1ea;
+  --bg-deep: #ece6da;
+  --surface: #fffdfa;
+  --surface-2: #efeade;
+  --text: #23241f;
+  --text-2: #6f6a5f;
+  --text-3: #a49d8f;
+  --accent: #3d5c4c;
+  --accent-deep: #2f4a3d;
+  --accent-soft: #e5ece3;
+  --line: rgba(35, 36, 31, 0.08);
+  --danger: #b0523c;
+  --shadow: 0 8px 24px rgba(71, 60, 42, 0.07);
+  --shadow-soft: 0 2px 10px rgba(71, 60, 42, 0.05);
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --font-display: "Songti SC", "Noto Serif SC", "STSong", serif;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  --el-color-primary: #3d5c4c;
+  --el-color-primary-light-3: #5f7a6c;
+  --el-color-primary-light-5: #86a094;
+  --el-color-primary-light-7: #b3c4ba;
+  --el-color-primary-light-8: #cbd7cf;
+  --el-color-primary-light-9: #e6ede9;
+  --el-color-primary-dark-2: #2f4a3d;
+  --el-color-danger: #b0523c;
+  --el-color-danger-light-9: #f7ece8;
+  --el-border-radius-base: 12px;
+  --el-border-color: rgba(35, 36, 31, 0.12);
+  --el-text-color-primary: #23241f;
+  --el-text-color-regular: #55524a;
+  --el-font-size-base: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #e8e2d6;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC",
+    "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ---------- 应用外壳 ---------- */
+.app-shell {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--bg);
+  background-image: radial-gradient(circle at 18% -8%, #fbf8f1 0%, transparent 45%),
+    radial-gradient(circle at 100% 0%, #eef0e7 0%, transparent 38%);
+  box-shadow: 0 0 40px rgba(60, 50, 35, 0.08);
+  overflow-x: hidden;
+}
+
+.page {
+  padding: calc(14px + var(--safe-top)) 18px calc(40px + var(--safe-bottom));
+}
+
+.page--with-bar {
+  padding-bottom: calc(126px + var(--safe-bottom));
+}
+
+/* ---------- 通用文字 ---------- */
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--text-3);
+  text-transform: uppercase;
+}
+
+.display-title {
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+}
+
+.section-label::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: var(--text-3);
+}
+
+.muted {
+  color: var(--text-3);
+}
+
+/* ---------- 胶囊标签 ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: #55524a;
+  font-size: 13px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.chip:active {
+  transform: scale(0.97);
+}
+
+.chip.is-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.chip.chip--sm {
+  height: 29px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.chip.chip--outline {
+  background: transparent;
+  border-color: var(--line);
+}
+
+.chip.chip--outline.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+/* ---------- 空状态 ---------- */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 56px 30px;
+  text-align: center;
+  color: var(--text-2);
+}
+
+.empty-state__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 76px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px dashed rgba(35, 36, 31, 0.16);
+  color: var(--text-3);
+}
+
+.empty-state__title {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.empty-state__text {
+  max-width: 260px;
+  font-size: 12.5px;
+  color: var(--text-3);
+  line-height: 1.7;
+}
+
+/* ---------- 固定底部操作栏 ---------- */
+.bottom-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  z-index: 15;
+  width: min(100%, 520px);
+  transform: translateX(-50%);
+  padding: 12px 18px calc(14px + var(--safe-bottom));
+  background: linear-gradient(180deg, rgba(245, 241, 234, 0) 0%, rgba(245, 241, 234, 0.94) 32%, #f5f1ea 100%);
+}
+
+/* ---------- Element Plus 移动端微调 ---------- */
+.el-message {
+  font-size: 13px;
+}
+
+.el-dialog {
+  --el-dialog-border-radius: 20px;
+}
+
+.el-dialog.is-fullscreen {
+  background: var(--bg);
+}
+
+.el-dialog__header {
+  margin: 0;
+  padding: 18px 20px 6px;
+}
+
+.el-dialog__title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.el-dialog__body {
+  padding: 12px 20px 20px;
+}
+
+.el-dialog__footer {
+  padding: 10px 20px calc(16px + var(--safe-bottom));
+}
+
+.el-form-item {
+  margin-bottom: 16px;
+}
+
+.el-form-item__error {
+  font-size: 11.5px;
+  padding-top: 4px;
+}
+
+.el-input__wrapper,
+.el-select__wrapper {
+  background: var(--surface);
+  box-shadow: 0 0 0 1px var(--line) inset;
+  border-radius: 12px;
+}
+
+.el-input__wrapper.is-focus,
+.el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1.5px var(--accent) inset;
+}
+
+.el-overlay {
+  background: rgba(30, 29, 25, 0.42);
+}
+
+.el-message-box {
+  width: min(86vw, 380px);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.el-button {
+  border-radius: 12px;
+}
+
+.el-button--large {
+  height: 46px;
+  font-size: 15px;
+}
+
+.el-popper.is-light {
+  border-radius: 12px;
+  border-color: var(--line);
+}
+
+/* ---------- 动效 ---------- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.18s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-slide-enter-active {
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* 移动端输入框字号保持 16px，避免 iOS 聚焦时页面自动放大 */
+@media (max-width: 640px) {
+  .el-input__inner,
+  .el-textarea__inner,
+  .el-select__wrapper,
+  .el-input-number .el-input__inner {
+    font-size: 16px;
+  }
+}
