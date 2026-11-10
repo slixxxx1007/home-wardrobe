@@ -48,7 +48,7 @@ const statusOptions = [
 ]
 
 const storageModeText = computed(() =>
-  storageMode.value === 'cloud' ? '云端共享模式 · 两台手机共用一份数据' : '本地模式 · 数据保存在这台手机上'
+  storageMode.value === 'cloud' ? '云端共享 · 自动同步 · 改完自动上线' : '本地模式 · 数据保存在这台手机上'
 )
 
 onMounted(async () => {
